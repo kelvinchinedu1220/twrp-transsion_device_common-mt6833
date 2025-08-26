@@ -5,9 +5,8 @@ export FOX_AB_DEVICE=1
 export FOX_VIRTUAL_AB_DEVICE=1
 export OF_DEFAULT_KEYMASTER_VERSION=4.1
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-export OF_MAINTAINER="sora1504_rama982"
+export OF_MAINTAINER="NINO_P55"
 export FOX_VARIANT="A12+"
-export OF_FLASHLIGHT_ENABLE=0
 
 export FOX_USE_BASH_SHELL=1
 export FOX_USE_NANO_EDITOR=1
@@ -29,7 +28,11 @@ export OF_USE_LZ4_COMPRESSION=true
 
 export OF_USE_GREEN_LED=1
 export OF_FLASHLIGHT_ENABLE=1
-export OF_FL_PATH=
+export OF_FL_PATH="/sys/class/torch/torch/torch_level"
+export OF_FL_PATH1="/sys/class/leds/lcd-backlight/max_brightness"
+
+# Tools
+TW_INCLUDE_FB2PNG := true
  
 export OF_SCREEN_H=2400
 export OF_STATUS_H=95
