@@ -139,11 +139,33 @@ BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 TW_DEVICE_VERSION := NINO_KELVIN
 
 # Torch
-PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_DISABLE_DEFAULT_PATCH_AVB2 := true
-PB_DISABLE_DEFAULT_TREBLE_COMP := true
-PB_TORCH_PATH := /sys/class/torch/torch/torch_level
-PB_TORCH_PATH := /sys/class/leds/lcd-backlight/max_brightness
+SHRP_TORCH_PATH := /sys/class/torch/torch/torch_level
+SHRP_TORCH_PATH := /sys/class/leds/lcd-backlight/max_brightness
+
+#SHRP Prop
+SHRP_OFFICIAL := true
+#
+SHRP_PATH := device/xiaomi/P661n
+SHRP_MAINTAINER := nino
+# Device codename *
+SHRP_DEVICE_CODE := gale
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A/B
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+SHRP_NOTCH := true
+SHRP_EXPRESS := true
+SHRP_DARK := true
+SHRP_EDL_MODE := 0
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+SHRP_FLASH_MAX_BRIGHTNESS := 200
+SHRP_AB := true
+SHRP_FLASH := 1
+SHRP_TORCH_PATH := "/sys/devices/platform/flashlights_ocp8132/torch_brightness"
+SHRP_SKIP_COMPATIBILITY_CHECK := true
 
 # Tools
 TW_INCLUDE_FB2PNG := true
