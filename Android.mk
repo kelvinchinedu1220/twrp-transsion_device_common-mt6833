@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter Infinix-X6711 Tecno-LH8n,$(TARGET_DEVICE)),)
+ifneq ($(filter P661n,$(TARGET_DEVICE)),)
 
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
