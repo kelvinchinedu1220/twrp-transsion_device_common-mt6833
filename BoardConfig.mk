@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/itel/P661N
+DEVICE_PATH := device/itel/P661N
 
 TARGET_RECOVERY_DEVICE_DIRS := \
     $(DEVICE_PATH)
