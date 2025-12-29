@@ -5,7 +5,7 @@ export FOX_AB_DEVICE=1
 export FOX_VIRTUAL_AB_DEVICE=1
 export OF_DEFAULT_KEYMASTER_VERSION=4.1
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-export OF_MAINTAINER="sora1504_rama982"
+export OF_MAINTAINER="kelvin"
 export FOX_VARIANT="A12+"
 export OF_FLASHLIGHT_ENABLE=0
 
@@ -53,7 +53,7 @@ git clone https://android.googlesource.com/platform/external/gflags/ -b android-
 # Patches
 RET=0
 cd bootable/recovery
-git apply ../../transsion/device/common-mt6833/patches/0001-Change-haptics-activation-file-path.patch > /dev/null 2>&1 || RET=$?
+git apply ../../twrp_device_p55/patches/0001-Change-haptics-activation-file-path.patch > /dev/null 2>&1 || RET=$?
 cd ../../
 if [ $RET -ne 0 ];then
     echo "ERROR: Patch is not applied! Maybe it's already patched?"
