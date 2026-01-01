@@ -27,9 +27,10 @@ export OF_LOOP_DEVICE_ERRORS_TO_LOG=1
 export OF_USE_LZ4_COMPRESSION=true
 
 export OF_USE_GREEN_LED=1
-export OF_FLASHLIGHT_ENABLE=1
-export OF_FL_PATH="/sys/class/torch/torch/torch_level"
-export OF_FL_PATH1="/sys/class/leds/lcd-backlight/max_brightness"
+export FOX_FLASHLIGHT_ENABLE="1"
+export FOX_FL_PATH1="/temp/flashlight"
+export OF_FL_PATH2="/sys/class/torch/torch/torch_level"
+export OF_FL_PATH3="/sys/class/leds/lcd-backlight/max_brightness"
 
 # Tools
 TW_INCLUDE_FB2PNG := true
