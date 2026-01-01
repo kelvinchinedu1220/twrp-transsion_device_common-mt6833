@@ -32,9 +32,6 @@ export FOX_FL_PATH1="/temp/flashlight"
 export OF_FL_PATH2="/sys/class/torch/torch/torch_level"
 export OF_FL_PATH3="/sys/class/leds/lcd-backlight/max_brightness"
 
-# Tools
-TW_INCLUDE_FB2PNG := true
- 
 export OF_SCREEN_H=2400
 export OF_STATUS_H=95
 export OF_STATUS_INDENT_LEFT=48
