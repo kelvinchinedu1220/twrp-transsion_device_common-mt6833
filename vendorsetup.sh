@@ -56,7 +56,7 @@ git clone https://android.googlesource.com/platform/external/gflags/ -b android-
 # Patches
 RET=0
 cd bootable/recovery
-git apply https://github.com/kelvinchinedu1220/twrp_device_p55/patches/patches/0001-Change-haptics-activation-file-path.patch > /dev/null 2>&1 || RET=$?
+git apply https://github.com/kelvinchinedu1220/twrp_device_p55/patches/0001-Change-haptics-activation-file-path.patch > /dev/null 2>&1 || RET=$?
 if [ $RET -ne 0 ];then
     echo "ERROR: Patch is not applied! Maybe it's already patched?"
 else
