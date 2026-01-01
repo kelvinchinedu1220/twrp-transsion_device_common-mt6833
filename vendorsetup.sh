@@ -5,9 +5,8 @@ export FOX_AB_DEVICE=1
 export FOX_VIRTUAL_AB_DEVICE=1
 export OF_DEFAULT_KEYMASTER_VERSION=4.1
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-export OF_MAINTAINER="kelvin"
+export OF_MAINTAINER="NINO_P55"
 export FOX_VARIANT="A12+"
-export OF_FLASHLIGHT_ENABLE=0
 
 export FOX_USE_BASH_SHELL=1
 export FOX_USE_NANO_EDITOR=1
@@ -27,6 +26,14 @@ export OF_LOOP_DEVICE_ERRORS_TO_LOG=1
 
 export OF_USE_LZ4_COMPRESSION=true
 
+export OF_USE_GREEN_LED=1
+export OF_FLASHLIGHT_ENABLE=1
+export OF_FL_PATH="/sys/class/torch/torch/torch_level"
+export OF_FL_PATH1="/sys/class/leds/lcd-backlight/max_brightness"
+
+# Tools
+TW_INCLUDE_FB2PNG := true
+ 
 export OF_SCREEN_H=2400
 export OF_STATUS_H=95
 export OF_STATUS_INDENT_LEFT=48
@@ -37,12 +44,10 @@ export OF_CLOCK_POS=1
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
 export CCACHE_MAXSIZE="5G"
-export CCACHE_DIR="~/ccache"
+export CCACHE_DIR=".ccache"
 
-if [ ! -d ${CCACHE_DIR} ];
-then
-  echo "CCACHE Directory/Partition is not mounted at \"${CCACHE_DIR}\""
-  echo "Please edit the CCACHE_DIR build variable or mount the directory."
+if [ ! -d ${CCACHE_DIR} ]; then
+  mkdir $CCACHE_DIR
 fi
 
 export LC_ALL="C"
@@ -53,7 +58,7 @@ git clone https://android.googlesource.com/platform/external/gflags/ -b android-
 # Patches
 RET=0
 cd bootable/recovery
-git apply ../../twrp_device_p55/patches/0001-Change-haptics-activation-file-path.patch > /dev/null 2>&1 || RET=$?
+git apply ../../kelvinchinedu1220/twrp_device_p55/patches/0001-Change-haptics-activation-file-path.patch > /dev/null 2>&1 || RET=$?
 cd ../../
 if [ $RET -ne 0 ];then
     echo "ERROR: Patch is not applied! Maybe it's already patched?"
