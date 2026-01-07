@@ -160,5 +160,17 @@ TW_CUSTOM_CPU_POS := "300"
 TW_CUSTOM_CLOCK_POS := "70"
 TW_CUSTOM_BATTERY_POS := "790"
 
+# FastbootD
+TW_INCLUDE_FASTBOOTD := true
+
+# USB Configuration
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+
+# USB OTG
+TW_USB_STORAGE := true
+
+# Version
+TW_DEVICE_VERSION := Kelvin
+
 # Hack depends
 ALLOW_MISSING_DEPENDENCIES := true
